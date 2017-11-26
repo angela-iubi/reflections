@@ -1,1 +1,65 @@
 deja o prima intrebare reflectiva a venit
+
+recapitulare comenzi
+
+git log				- afiseaza versiunile cu ce comentarii au fost salvate
+
+git diff id1 id2
+
+git checkout id-old - revine la o versiune anterioara cu id-old 
+
+git add 			- adauga fisiere in staged area din working directory
+
+git diff   			- intre working directory si staged area
+
+git diff --staged	- intre staged area si ultimul commit (id1)
+
+git diff --hard		- renunta la orice modificari in working directory si 						stageing area - se pierd ireversibil 
+
+git status			- situatia fisierelor din staged area - daca sunt de 						facut commit la ele, situatia branch-urilor.... de 
+					completat inca....
+
+git chekout master	- .... de vazut ce face mai precis					
+
+
+******* ramurile
+cand vreau sa experimentez cate ceva in aplicatie, dar sa nu pierd tot ansamblul pana acum - ramura principala = master - (git chekout master  - pe ce doresc sa fie master)
+
+creez o nou ramura:  
+	git branch noua_ramura
+
+vizualizez ramurile:
+	git branch 		(aici imi arata si pe care sunt cu *)
+
+trec la o ramura cu:
+	git chekcout nume_ramura
+
+***********
+pentru a vedea structura ramurii :
+	git log graph
+
+pentru a vedea structura ramificata (cu modificarile la ambele) intre master si nume_ramura_noua:
+	git log --graph --online master nume_ramura_nou
+
+git checkout -b new_branch_name  - 2 comenzi in una , adica
+									git branch ramura_noua
+									git checkout ramura_noua:
+
+
+
+***** combinarea a doua ramuri:
+git merge ramura1 ramura2
+sau 
+git merge ramura (pe care vreau sa o cumbin cu cea in care sunt pozitionata)
+
+git show 		- imi arata modificarile fata de commitul parinte chiar daca 					nu il cunosc
+git show id-x     - modificarile fata de parintele commitului cu id-ul id-x
+
+git branch -d id-x - sterge  ramura id-x
+
+git merge --abort		- daca nu functioneaza merg-ul, se poate intrerupe
+
+ceva nu a mers bine la exercitiu - nu mi-a reusit, mi-a dat conflict la merge, pe care nu l-am descoperit
+
+****exista si conflicte care trebuie rezolvate 
+
