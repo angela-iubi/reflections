@@ -54,3 +54,14 @@ git push origin master 			*** am trimis fisierul in fork
 
 git pull origin master =    git fetch origin
 						  + git merge master origin/master
+
+****
+****despre ramuri si crearea unei ramuri de pe local pe GitHub.
+ din noua ramura pe local trimit:
+    git push origin nume_ramura_noua_pe_GitHub
+
+apoi despre lansarea unei cereri de pull din GitHub
+	din ramura creata lansez cererea prin apasarea butonului "pull request"
+
+	
+
