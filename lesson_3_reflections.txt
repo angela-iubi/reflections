@@ -1,12 +1,26 @@
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    Fill in your answer here
+   Pentru colaborare cu alti programatori, sau pe post de cloud
+
+   git remote			- vezi toate remoturile pe local
+
+   git remote add nume_originar ...linkul la GitHub		- adauga in staged area
+
+   git remote -v
+
+   git push	origin master		- transmite remotul origin de pe local, pe 
+   								masterul din GitHub
+
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
+    automat este mai sigur decat manual. Manual pierzi timp si poti pierde din vedere date
+
+    git pull origin master 		- preia datele modificate de pe GitHub
+
+
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
@@ -27,3 +41,16 @@ When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
     Fill in your answer here
+
+
+*** in GitHub, este comanda Fork, pentru a clona un repository in contul tau, in vederea adaugarii/modificarii codului.
+acesta se poate clona pe statie, lucra pe ea si transmise modificarile pe GitHub
+
+atuncicand adaug un fisier nou la forkul creat, execut:
+
+git add "calea\si_fisierul_de_adaugat"
+git push origin master 			*** am trimis fisierul in fork
+
+
+git pull origin master =    git fetch origin
+						  + git merge master origin/master
