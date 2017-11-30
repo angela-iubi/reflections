@@ -63,5 +63,21 @@ git pull origin master =    git fetch origin
 apoi despre lansarea unei cereri de pull din GitHub
 	din ramura creata lansez cererea prin apasarea butonului "pull request"
 
-	
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+am facut exercitiul in care am dat un  pull request pentru modificarile mele pe care le-am plasat intr-o ramura, atat local cat si pe GitHub
+acest lucru este avantajos atunci cand doresc ca modificarile mele sa fie confruntate de colaboratori. Nu le impun. 
+Cand am ajuns la o intelegere cu ei, pot include acele modificari in master. 
+pentru asta:
+- mai intai preiau toate actualizarile de pe GitHub din master.
+git pull origin master
+
+- apoi combin ramura mea cu masterul meu:
+git checkout ramura_mea
+git merge master ramura_mea
+git log
+
+- apoi trimit modificarile mele pe GitHUb:
+git push origin master
 
